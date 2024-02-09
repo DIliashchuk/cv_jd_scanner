@@ -1,0 +1,406 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/style1.css' %}" >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="logo">
+      <img class="main-logo" src="{% static 'cv_jd_scanner/images/logo.png'%}" alt="logo">
+      <button class="statistics" onclick="scrollToSection('Statistics')">
+        <strong>Statistics</strong>
+      </button>
+      <button class="locations" onclick="scrollToSection('global-locations')">
+        <strong>Global Locations</strong>
+      </button>
+      <button class="our_team" onclick="scrollToSection('team')">
+        <strong>Our Team</strong>
+      </button>
+      <button class="contacts" onclick="scrollToSection('Footer')">
+        <strong>Contacts</strong>
+      </button>
+    </div>
+
+    <div class="header"></div>
+    <h1 class="header-wrapper" id="Statistics">Our Statistics</h1>
+    <div class="wrapper">
+      <div class="container">
+        <span class="num" data-val="35">000</span>
+        <span class="text">Current clients</span>
+      </div>
+
+      <div class="container">
+        <span class="num" data-val="100">000</span>
+        <span class="text">Clients in a past</span>
+      </div>
+
+      <div class="container">
+        <span class="num" data-val="5">000</span>
+        <span class="text">Years on a market</span>
+      </div>
+    </div>
+
+    <h1 class="header-wrapper">Clients our team served in a past</h1>
+
+    <div class="logos">
+      <div class="logo_items">
+        <img src="{% static 'cv_jd_scanner/images/1.png' %}/>
+        <img src="img_old_client/2.png" />
+        <img src="img_old_client/3.png" />
+        <img src="img_old_client/4.png" />
+        <img src="img_old_client/5.png" />
+        <img src="img_old_client/6.png" />
+        <img src="img_old_client/7.png" />
+        <img src="img_old_client/8.png" />
+        <img src="img_old_client/9.png" />
+        <img src="img_old_client/10.png" />
+        <img src="img_old_client/11.png" />
+        <img src="img_old_client/12.png" />
+        <img src="img_old_client/13.png" />
+        <img src="img_old_client/14.png" />
+        <img src="img_old_client/15.png" />
+        <img src="img_old_client/16.png" />
+        <img src="img_old_client/17.png" />
+        <img src="img_old_client/18.png" />
+        <img src="img_old_client/19.png" />
+        <img src="img_old_client/20.png" />
+        <img src="img_old_client/21.png" />
+        <img src="img_old_client/22.png" />
+        <img src="img_old_client/23.png" />
+        <img src="img_old_client/24.png" />
+        <img src="img_old_client/25.png" />
+      </div>
+      <div class="logo_items">
+        <img src="img_old_client/1.png" />
+        <img src="img_old_client/2.png" />
+        <img src="img_old_client/3.png" />
+        <img src="img_old_client/4.png" />
+        <img src="img_old_client/5.png" />
+        <img src="img_old_client/6.png" />
+        <img src="img_old_client/7.png" />
+        <img src="img_old_client/8.png" />
+        <img src="img_old_client/9.png" />
+        <img src="img_old_client/10.png" />
+        <img src="img_old_client/11.png" />
+        <img src="img_old_client/12.png" />
+        <img src="img_old_client/13.png" />
+        <img src="img_old_client/14.png" />
+        <img src="img_old_client/15.png" />
+        <img src="img_old_client/16.png" />
+        <img src="img_old_client/17.png" />
+        <img src="img_old_client/18.png" />
+        <img src="img_old_client/19.png" />
+        <img src="img_old_client/20.png" />
+        <img src="img_old_client/21.png" />
+        <img src="img_old_client/22.png" />
+        <img src="img_old_client/23.png" />
+        <img src="img_old_client/24.png" />
+        <img src="img_old_client/25.png" />
+      </div>
+    </div>
+
+    <h1 class="header-wrapper" id="global-locations">Global Locations</h1>
+    <div class="global-locations">
+      <p class="bottom-wrapper-new">
+        With our global coverage of the most important sources of IT talent in
+        Europe, The Americas and Asia. EQWI OFFERS ACCESS TO THE TALENT POOL OF
+        2.5+ BILLION PEOPLE
+      </p>
+      <div class="container">
+        <div class="items">
+          <div class="entry">
+            <p class="name">UKRAINE</p>
+            <img src="img/ukraine-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              45 mln population, 2nd largest IT market in Europe Across the
+              board tech stack coverage
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">TURKEY</p>
+            <img src="img/turkey-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              85 mln population 38% of population under 25 y.o. Skilled and
+              fast-growing IT talent pool
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">ROMANIA</p>
+            <img src="img/romania-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              20 mln population Small, but highly skilled IT industry +1 hour vs
+              EST zone
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">MEXICO</p>
+            <img src="img/mexico-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              127 mln population Highly skilled & diverse IT industry -1 hour vs
+              EST zone
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">BRAZIL</p>
+            <img src="img/brazil-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              215 mln population 9th largest IT market in the world +1 hour vs
+              EST zone
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">CANADA</p>
+            <img src="img/canada-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              38 mln population Large software market in the same time zone as
+              the US
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">INDIA</p>
+            <img src="img/india-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              1.4 bln population The largest & oldest IT market, diverse &
+              cost-effective skillset
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">PHILIPPINES</p>
+            <img src="img/philipinnes-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              15 mln population Large and cost-effective skillset Call-center &
+              BPO specialization.
+            </p>
+          </div>
+          
+        </div>
+        <div class="items">
+          <div class="entry">
+            <p class="name">UKRAINE</p>
+            <img src="img/ukraine-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              45 mln population, 2nd largest IT market in Europe Across the
+              board tech stack coverage
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">TURKEY</p>
+            <img src="img/turkey-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              85 mln population 38% of population under 25 y.o. Skilled and
+              fast-growing IT talent pool
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">ROMANIA</p>
+            <img src="img/romania-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              20 mln population Small, but highly skilled IT industry +1 hour vs
+              EST zone
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">MEXICO</p>
+            <img src="img/mexico-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              127 mln population Highly skilled & diverse IT industry -1 hour vs
+              EST zone
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">BRAZIL</p>
+            <img src="img/brazil-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              215 mln population 9th largest IT market in the world +1 hour vs
+              EST zone
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">CANADA</p>
+            <img src="img/canada-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              38 mln population Large software market in the same time zone as
+              the US
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">INDIA</p>
+            <img src="img/india-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              1.4 bln population The largest & oldest IT market, diverse &
+              cost-effective skillset
+            </p>
+          </div>
+          <div class="entry">
+            <p class="name">PHILIPPINES</p>
+            <img src="img/philipinnes-1@2x.png" alt="Smiling person" />
+            <p class="quote">
+              15 mln population Large and cost-effective skillset Call-center &
+              BPO specialization.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+    <div class="team-header" id="team">
+      <h1 class="header-wrapper">Our Team</h1>
+    </div>
+
+    <div class="team-text">
+      <p class="bottom-wrapper-new">
+        Meet our Team of pofesssionals, a team of hardworkers and pasionate. Or
+        all team members are good in his works.
+      </p>
+    </div>
+
+    <div class="team-body">
+      <div class="team-card">
+        <img class="team-member-image" src="img/murad.jpeg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Murad Sofizade</p>
+          <p class="designation" style="color: white">CEO, Founder</p>
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/muradsofizade/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-member-image" src="img/Iliaschuk (1).jpg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Dmytro Iliashchuk</p>
+          <p class="designation" style="color: white">Head of Recruitment</p>
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/dmytroiliashchuk/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-member-image" src="img/maletska.jpeg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Nataliia Maletska</p>
+          <p class="designation" style="color: white">Recruitment Consultant</p>
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/nataliiamaletska/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-member-image" src="img/Demydenko.jpeg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Svetlana Demydenko</p>
+          <p class="designation" style="color: white">Talent Sourcer</p>
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/svitlana-demydenko-4233b81a0/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="team-body-new-line">
+      <div class="team-card">
+        <img class="team-member-image" src="img/Bessonov.jpg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Bogdan Bessonov</p>
+          <p class="designation" style="color: white">Talent Sourcer</p>
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/bogdan-bessonov-90708821b/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+
+      <div class="team-card">
+        <img class="team-member-image" src="img/Lysenko.jpg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Ksenia Lysenko</p>
+          <p class="designation" style="color: white">Talent Sourcer</p>
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/ksenia-lysenko-b77779266/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="team-card">
+        <img class="team-member-image" src="img/Ryltsev.jpg" />
+        <div class="tm-description">
+          <p class="name" style="color: white">Roman Ryltsev</p>
+          <p class="designation" style="color: white">Project Manager</p> 
+          <a
+            class="designation"
+            href="https://www.linkedin.com/in/romanryltsev/" target="_blank"
+            style="color: white"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="contacts-last-bottom" id="Footer">
+      <h1 class="header-wrapper">Contacts</h1>
+      <p class="bottom-wrapper-new">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, rerum
+        vero fuga facere dicta laborum, a dolor unde ab corrupti atque hic
+        doloremque. Unde dolores, sit totam magnam necessitatibus incidunt!
+      </p>
+    </div>
+    <div class="footer-distributed" id="Footer">
+      <div class="footer-left">
+          <h3>EQWI<span>Ventures</span></h3>
+          <p class="footer-company-name">EQWI Ventures © 2023</p>
+      </div>
+
+      <div class="footer-center">
+          <div>
+              <p><span>2100 Midnight Pearl Drive</span> Sarasota, FL 34240 USA</p>
+          </div>
+
+          <div>
+              <p>
+                  <a href="mailto:murad@eqwiventures.com">murad@eqwiventures.com</a>
+              </p>
+          </div>
+      </div>
+
+      <div class="footer-right">
+          <p class="footer-company-about">
+              <span>About the company</span>
+              Your trusted provider of top software engineering talent from Europe,
+              The Americas and Asia Ukraine, Turkey, Romania, Mexico, Brazil,
+              Canada, India, Pakistan, Philippines
+          </p>
+      </div>
+  </div>
+
+    <script src="navigation.js"></script>
+    <script src="counter.js"></script>
+
+</body>
+
+</html>
