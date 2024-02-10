@@ -7,30 +7,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/register.css' %}" >
   </head>
   <body>
-    <div class="container">
-      <div class="wrapper">
-        <div class="title"><span>Login Form</span></div>
-        <form action="#">
-          <div class="row">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Email or Phone" required>
-          </div>
-          <div class="row">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required>
-          </div>
-          <div class="pass"><a href="#">Forgot password?</a></div>
-          <div class="row button">
-            <input type="submit" value="Login">
-          </div>
-          <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-        </form>
-      </div>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+                <input type="text" placeholder="username"/>
+                <input type="password" placeholder="password"/>
+                <button>login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
     </div>
-
   </body>
 </html>

@@ -14,8 +14,6 @@
 </head>
 
 <body>
-    <a href="{% url 'indexdb' %}">Login to indexDB</a>
-    <a href="{% url 'register' %}">Register User</a>
     <div class="logo">
       <img class="main-logo" src="{% static 'cv_jd_scanner/images/logo.png'%}" alt="logo">
       <button class="statistics" onclick="scrollToSection('Statistics')">
@@ -30,6 +28,9 @@
       <button class="contacts" onclick="scrollToSection('Footer')">
         <strong>Contacts</strong>
       </button>
+        <a href="{% url 'indexdb' %}" class="statistics btn-custom">Login</a>
+        <a href="{% url 'register' %}" class="locations btn-custom">Register</a>
+
     </div>
 
     <div class="header" style="background-image: url('{% static 'cv_jd_scanner/images/eqwi1.png' %}')"></div>

@@ -43,7 +43,9 @@
   .statistics,
   .locations,
   .our_team,
-  .contacts {
+  .contacts,
+  .btn-custom
+  {
     position: relative;
     top: 0;
     left: 0;
@@ -64,7 +66,15 @@
   .statistics:hover,
   .locations:hover,
   .our_team:hover,
-  .contacts:hover {
+  .contacts:hover,
+  .btn-custom:hover
+  {
+        color: #fff;
+        text-decoration: none;
+        transform: scale(1.05);
+  }
+
+  {
     color: gray;
     text-decoration: none;
     transform: scale(1.05);
@@ -74,7 +84,8 @@
     .statistics,
     .locations,
     .our_team,
-    .contacts {
+    .contacts,
+    .btn-custom{
         font-size: 2vw;
         margin-right: 2vw;
     }
