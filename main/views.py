@@ -28,7 +28,6 @@ def indexdb(request):
     return render(request, 'cv_jd_scanner/indexdb.html', {'cv_data': cv_data, 'selected_cv': selected_cv})
 
 
-
 def register_view(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
@@ -68,8 +67,5 @@ def add_technology(request):
     return render(request, 'cv_jd_scanner/add_technology.html', {'form': form})
 
 
-
-
-
 def add_cv(request):
-    pass
+    return render(request, 'cv_jd_scanner/add_cv.html')

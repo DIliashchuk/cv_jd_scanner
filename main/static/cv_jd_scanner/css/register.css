@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+
+.messagelogin {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -30,7 +37,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #343f34;
+  background: #2c2c2c;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -89,14 +96,13 @@
   color: #EF3B3A;
 }
 body {
-  background: #2c2c2c; /* fallback for old browsers */
+  background: #2c2c2c;
   background: rgb(66, 66, 64);
-  background: linear-gradient(90deg, rgb(73, 77, 72) 0%, rgb(51, 58, 48) 50%);
+  background: linear-gradient(90deg, rgb(73, 77, 72) 0%, rgb(44, 44, 44) 50%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 
 form.login-form {
@@ -160,3 +166,5 @@ form.login-form button:hover, form.login-form button:active, form.login-form but
   color: #333a30;
   text-decoration: none;
 }
+
+
