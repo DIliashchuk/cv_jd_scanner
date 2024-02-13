@@ -11,10 +11,7 @@
         <h1>Add CV</h1>
         <form method="post" action="{% url 'add_cv' %}" enctype="multipart/form-data">
             {% csrf_token %}
-            <label for="pdf_file">Upload PDF:</label>
-            {{ form.pdf_file }}
-            <!-- Display validation errors if any -->
-            {{ form.pdf_file.errors }}
+            <input type="file" name="cv_file" accept=".pdf, .txt" required>
             <button type="submit">Upload CV</button>
         </form>
     </div>

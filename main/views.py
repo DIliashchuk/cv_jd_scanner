@@ -2,11 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from main.forms import CustomUserCreationForm
-from .forms import CVForm, TechnologyForm
-import re
+from .forms import TechnologyForm
 import PyPDF2
 from .models import CV
-
+from django.http import HttpResponse
 
 def index(request):
     return render(request, 'cv_jd_scanner/index1.html', {'title': ''})
@@ -68,4 +67,23 @@ def add_technology(request):
 
 
 def add_cv(request):
+    if request.method == 'POST':
+        if 'cv_file' in request.FILES:
+            cv_file = request.FILES['cv_file']
+
+            if cv_file.name.endswith('.pdf'):
+                text = extract_text_from_pdf(cv_file)
+                CV.objects.create(cv_text=text)
+                return redirect('indexdb')  # Redirect to a success page
+            else:
+                return HttpResponse("Invalid file format. Please upload a PDF file.")
     return render(request, 'cv_jd_scanner/add_cv.html')
+
+
+def extract_text_from_pdf(pdf_file):
+    with pdf_file as f:
+        pdf_reader = PyPDF2.PdfReader(f)
+        text = ""
+        for page_num in range(len(pdf_reader.pages)):
+            text += pdf_reader.pages[page_num].extract_text()
+        return text
