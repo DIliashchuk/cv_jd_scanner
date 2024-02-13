@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/register.css' %}">
+    <style>
+      .form .register-form {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form">
+          <input type="text" placeholder="name"/>
+          <input type="password" placeholder="password"/>
+          <input type="text" placeholder="email address"/>
+          <button>create</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
