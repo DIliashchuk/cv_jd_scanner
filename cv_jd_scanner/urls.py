@@ -23,8 +23,9 @@ from main import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
     path('', include('main.urls')),
     path('indexdb/', indexdb, name='indexdb'),
-    path('register/', views.register_user, name='register'),
+    path('register/', views.login_user, name='register'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

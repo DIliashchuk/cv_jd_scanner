@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/register.css' %}">
     <style>
       .form .register-form {
@@ -16,12 +16,14 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <form class="register-form">
-          <input type="text" placeholder="name"/>
-          <input type="password" placeholder="password"/>
-          <input type="text" placeholder="email address"/>
-          <button>create</button>
-          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        <form class="register-form" method="post" action="{% url 'register_view' %}">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Name" required/>
+          <input type="password" name="password1" placeholder="Enter your password" required/>
+          <input type="password" name="password2" placeholder="Confirm your password" required/>
+          <input type="email" name="email" placeholder="Email address" required/>
+          <button type="submit">Create</button>
+          <p class="message">Already registered? <a href="{% url 'login_user' %}">Sign In</a></p>
         </form>
       </div>
     </div>

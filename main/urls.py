@@ -1,15 +1,11 @@
-from django.urls import path
-from . import views
-from django.contrib import admin
-from main.views import indexdb
-from .views import index, indexdb, register_user
-from .views import register_view
+from django.urls import path, include
+from .views import index, indexdb, register_view, login_user
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('admin/', admin.site.urls),
+    path('', index, name='home'),
     path('indexdb/', indexdb, name='indexdb'),
-    path('register/user/', register_user, name='register_user'),
-    path('register/view/', register_view, name='register_view'),
+    path('register/', register_view, name='register_view'),
+    path('login/', login_user, name='login_user'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ]
-
