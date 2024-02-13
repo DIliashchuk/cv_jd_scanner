@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Technology</title>
+    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/db.css' %}" >
+</head>
+<body>
+    <div class="container">
+        <h1>Add Technology</h1>
+        <form method="post" action="{% url 'add_technology' %}">
+            {% csrf_token %}
+            <label for="technology_name">Technology Name:</label>
+            <input type="text" name="technology_name" required>
+
+            <label for="technology_description">Technology Description:</label>
+            <textarea name="technology_description" required></textarea>
+
+            <button type="submit">Add Technology</button>
+        </form>
+    </div>
+</body>
+</html>

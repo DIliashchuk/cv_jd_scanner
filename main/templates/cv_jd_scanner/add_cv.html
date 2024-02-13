@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add CV</title>
+    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/db.css' %}" >
+</head>
+<body>
+    <div class="container">
+        <h1>Add CV</h1>
+        <form method="post" action="{% url 'add_cv' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="pdf_file">Upload PDF:</label>
+            {{ form.pdf_file }}
+            <!-- Display validation errors if any -->
+            {{ form.pdf_file.errors }}
+            <button type="submit">Upload CV</button>
+        </form>
+    </div>
+</body>
+</html>

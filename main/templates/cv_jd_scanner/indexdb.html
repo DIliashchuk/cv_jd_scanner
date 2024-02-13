@@ -1,14 +1,24 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/db.css' %}" >
+    <title>{% block title %}Recruiter Dashboard{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'cv_jd_scanner/css/db.css' %}">
 </head>
 <body>
     <div class="container">
         <h1>Hello, {{ request.user.username }}</h1>
+
+        <!-- Navigation links -->
+        <nav>
+            <ul>
+                <li><a href="{% url 'add_cv' %}">Add CV</a></li>
+                <li><a href="{% url 'add_technology' %}">Add Technology</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+
         <table>
             <thead>
                 <tr>
@@ -20,41 +30,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Candidate 1</td>
-                    <td>Candidate 2</td>
-                    <td>Candidate 3</td>
-                    <td>Candidate 4</td>
-                    <td>Candidate 5</td>
-                </tr>
-                <tr>
-                    <td>Candidate 1</td>
-                    <td>Candidate 2</td>
-                    <td>Candidate 3</td>
-                    <td>Candidate 4</td>
-                    <td>Candidate 5</td>
-                </tr>
-                <tr>
-                    <td>Candidate 1</td>
-                    <td>Candidate 2</td>
-                    <td>Candidate 3</td>
-                    <td>Candidate 4</td>
-                    <td>Candidate 5</td>
-                </tr>
-                <tr>
-                    <td>Candidate 1</td>
-                    <td>Candidate 2</td>
-                    <td>Candidate 3</td>
-                    <td>Candidate 4</td>
-                    <td>Candidate 5</td>
-                </tr>
-                <tr>
-                    <td>Candidate 1</td>
-                    <td>Candidate 2</td>
-                    <td>Candidate 3</td>
-                    <td>Candidate 4</td>
-                    <td>Candidate 5</td>
-                </tr>
+
+                    {% for cv in cv_data %}
+                        <tr>
+                            <td>{{ cv.name }}</td>
+                            <td>{{ cv.surname }}</td>
+                            <td>{{ cv.summary }}</td>
+                            <td>{{ cv.skills }}</td>
+                            <td>{{ cv.contacts }}</td>
+                        </tr>
+                    {% endfor %}
             </tbody>
         </table>
     </div>

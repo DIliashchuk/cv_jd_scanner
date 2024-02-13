@@ -18,14 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from main.views import indexdb
 from main import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('main.urls')),
-    path('indexdb/', indexdb, name='indexdb'),
-    path('register/', views.login_user, name='register'),
+    path('indexdb/', views.indexdb, name='indexdb'),
+    path('register/', views.register_view, name='register'),
+    path('login/', views.login_user, name='login'),
     path('accounts/', include('django.contrib.auth.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

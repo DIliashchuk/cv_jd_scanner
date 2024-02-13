@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "main",
+    "cv_jd_scanner",
 ]
 
 MIDDLEWARE = [

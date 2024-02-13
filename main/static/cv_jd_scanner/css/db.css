@@ -63,3 +63,7 @@ tbody {
 		}
 	}
 }
+
+ul.nav-links li a {
+    color: white;
+}

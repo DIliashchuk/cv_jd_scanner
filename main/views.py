@@ -2,7 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from main.forms import CustomUserCreationForm
-
+from .forms import CVForm, TechnologyForm
+import re
+import PyPDF2
+from .models import CV
 
 
 def index(request):
@@ -10,8 +13,20 @@ def index(request):
 
 
 def indexdb(request):
-    print(request.user)
-    return render(request, 'cv_jd_scanner/indexdb.html', {'title': 'IndexDB Page'})
+    cv_data = CV.objects.all()
+
+    # Get the CV instance with the specified cv_id
+    selected_cv = None
+    cv_id = request.GET.get('cv_id')  # Assuming cv_id is passed as a query parameter
+
+    if cv_id:
+        try:
+            selected_cv = CV.objects.get(id=cv_id)
+        except CV.DoesNotExist:
+            selected_cv = None
+
+    return render(request, 'cv_jd_scanner/indexdb.html', {'cv_data': cv_data, 'selected_cv': selected_cv})
+
 
 
 def register_view(request):
@@ -39,3 +54,22 @@ def login_user(request):
     else:
         form = AuthenticationForm()
     return render(request, 'cv_jd_scanner/login_user.html', {'form': form, 'title': 'Login Page'})
+
+
+def add_technology(request):
+    if request.method == 'POST':
+        form = TechnologyForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('indexdb')  # Redirect to the main view after successful form submission
+    else:
+        form = TechnologyForm()
+
+    return render(request, 'cv_jd_scanner/add_technology.html', {'form': form})
+
+
+
+
+
+def add_cv(request):
+    pass
